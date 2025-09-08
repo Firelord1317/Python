@@ -7,7 +7,7 @@ friend5 = "6/10/2000"
 print("Hello, whose birth date would you like to view")
 friend = input("\nEnter the friend e.g friend1: ")
 
-# I have used two equal sins because one assigns value to the variable and two are use to compare values
+# I have used two equal signs because one assigns value to the variable and two are use to compare values
 # I have used elif to check multiple conditions and else to handle the case when none of the conditions are met
 
 if friend == "friend1":
