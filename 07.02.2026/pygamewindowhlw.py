@@ -14,7 +14,7 @@ pygame.display.set_caption("My first game screen")
 background_color = (58, 58, 58)
 
 # 3. Load and resize image to (300, 300)
-image = pygame.image.load("image.png")  # Make sure image.png is in the same folder
+image = pygame.image.load("07.02.2026/image.jpg")  # Make sure image.png is in the same folder
 image = pygame.transform.scale(image, (300, 300))
 
 # Get rectangle for centering the image
