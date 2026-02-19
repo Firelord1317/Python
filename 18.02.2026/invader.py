@@ -23,6 +23,12 @@ screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 # Background
 background = pygame.transform.scale(pygame.image.load('18.02.2026/background.jpg'), (SCREEN_WIDTH, SCREEN_HEIGHT))
 
+# Menu Background
+try:
+    menu_bg = pygame.transform.scale(pygame.image.load('18.02.2026/menu.png'), (SCREEN_WIDTH, SCREEN_HEIGHT))
+except:
+    menu_bg = None
+
 # Caption and Icon
 pygame.display.set_caption("Space Invader")
 icon = pygame.image.load('18.02.2026/icon.png')
@@ -66,6 +72,10 @@ textY = 10
 # Game Over Text
 over_font = pygame.font.Font('freesansbold.ttf', 64)
 
+# Game state
+game_state = 'menu'
+start_time = 0
+
 def show_score(x, y):
     # Display the current score on the screen.
     score = font.render("Score : " + str(score_value), True, (255, 255, 255))
@@ -75,6 +85,12 @@ def game_over_text():
     # Display the game over text
     over_text = over_font.render("GAME OVER", True, (255, 255, 255))
     screen.blit(over_text, (200, 250))
+
+def menu_screen():
+    if menu_bg:
+        screen.blit(menu_bg, (0, 0))
+    start_text = font.render("Press S to Start", True, (255, 255, 255))
+    screen.blit(start_text, (300, 400))
 
 def player(x, y):
     # Draw the player on the screen
