@@ -10,7 +10,7 @@ root.title("Denomination Counter")
 root.configure(bg="orange")
 root.geometry("650x400")
 
-# -------------------------------a
+# -------------------------------
 # Adding Image and Labels in Main Window
 # -------------------------------
 upload = Image.open("app_img.jpg")
